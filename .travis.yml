@@ -1,7 +1,10 @@
 # Define the language used
 language: python 
+sudo: required
 python:
   - '3.4'
+install:
+ - apt install docker.io
 script:
-- docker build -t demo .
-- docker run -itd --name python -p 8000:8000 demo 
+ - docker build -t demo .
+ - docker run -itd --name python -p 8000:8000 demo 
