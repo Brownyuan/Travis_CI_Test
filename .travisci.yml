@@ -1,0 +1,17 @@
+# Define the language used
+language: python
+sudo: 
+dist: 
+python:
+  - '3.4'
+
+before_install:
+
+install:
+  - docker build -t demo .
+
+before_script:
+
+script:
+
+after_success:
