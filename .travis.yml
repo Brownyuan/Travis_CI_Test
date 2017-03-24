@@ -1,17 +1,7 @@
 # Define the language used
-language: python
-sudo: 
-dist: 
+language: python 
 python:
   - '3.4'
-
-before_install:
-
-install:
-  - docker build -t demo .
-
-before_script:
-
 script:
-
-after_success:
+- docker build -t demo .
+- docker run -itd --name python -p 8000:8000 demo 
